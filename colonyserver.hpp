@@ -9,6 +9,8 @@
 #include <QtNetwork/QTcpSocket>
 #include <QList>
 #include <QThread>
+#include <QListWidget>
+#include <QMetaEnum>
 
 namespace Ui {
 class ColonyServer;
@@ -32,7 +34,7 @@ private:
 
 private slots:
     void newConnection();
-
+    void socketError(QAbstractSocket::SocketError);
 };
 
 #endif // COLONYSERVER_HPP

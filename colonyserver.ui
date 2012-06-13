@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>ColonyServer</class>
  <widget class="QMainWindow" name="ColonyServer">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -25,10 +28,49 @@
   <property name="windowTitle">
    <string>Colony Server</string>
   </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonFollowStyle</enum>
+  </property>
   <property name="unifiedTitleAndToolBarOnMac">
    <bool>true</bool>
   </property>
-  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="2" column="0">
+       <widget class="QListWidget" name="clientList"/>
+      </item>
+      <item row="2" column="1">
+       <widget class="QGraphicsView" name="mapView"/>
+      </item>
+      <item row="0" column="0">
+       <layout class="QVBoxLayout" name="verticalLayout"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="connectedClientsLabel">
+        <property name="text">
+         <string>Connected clients</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="mapLabel">
+        <property name="text">
+         <string>Map</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionQuit">
    <property name="text">

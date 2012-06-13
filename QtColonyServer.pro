@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui network
+QT       += core gui network timer
 
 TARGET = QtColonyServer
 TEMPLATE = app
@@ -12,9 +12,9 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
 		colonyserver.cpp \
-    serverthread.cpp
+	serverthread.cpp
 
 HEADERS  += colonyserver.hpp \
-    serverthread.hpp
+	serverthread.hpp
 
 FORMS    += colonyserver.ui
