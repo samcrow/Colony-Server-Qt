@@ -12,9 +12,17 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
 		colonyserver.cpp \
-	serverthread.cpp
+	serverthread.cpp \
+    colony.cpp \
+    clientdatamodel.cpp \
+    csvloader.cpp \
+    mapdraw.cpp
 
 HEADERS  += colonyserver.hpp \
-	serverthread.hpp
+	serverthread.hpp \
+    colony.hpp \
+    clientdatamodel.hpp \
+    csvloader.hpp \
+    mapdraw.hpp
 
 FORMS    += colonyserver.ui

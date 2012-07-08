@@ -9,14 +9,17 @@ class ServerThread : public QThread
     Q_OBJECT
 public:
     explicit ServerThread(QObject *parent = 0);
-    void exec();
+    void run();
 signals:
 
 public slots:
-
+    void quit();
 private slots:
 
 private:
+    int timer;
+protected:
+    void timerEvent(QTimerEvent *);
 };
 
 #endif // SERVERTHREAD_HPP
